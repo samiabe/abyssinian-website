@@ -128,11 +128,11 @@
       /* ─── NAV ─────────────────────────────────────── */
 
       #nav {
-        background: var(--dark);
+        background: var(--white);
         position: sticky;
         top: 0;
         z-index: 200;
-        border-bottom: 3px solid var(--green-mid);
+        border-bottom: 2px solid #1a5c2a;
       }
 
       .nav-inner {
@@ -143,9 +143,26 @@
         gap: 24px;
       }
 
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
       .nav-logo img {
-        height: 50px;
+        height: 70px;
         width: auto;
+        flex-shrink: 0;
+      }
+
+      .nav-logo-name {
+        color: #1a5c2a;
+        font-family: var(--font-body);
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.2;
+        letter-spacing: .02em;
+        white-space: nowrap;
       }
 
       .nav-links {
@@ -156,13 +173,13 @@
       }
 
       .nav-links a {
-        color: rgba(255,255,255,.8);
+        color: #1a5c2a;
         font-size: .9rem;
         font-weight: 400;
         letter-spacing: .02em;
         transition: color .15s;
       }
-      .nav-links a:hover { color: var(--green-light); }
+      .nav-links a:hover { color: var(--green-mid); }
 
       .nav-cta {
         background: var(--green-mid);
@@ -188,7 +205,7 @@
         display: block;
         width: 24px;
         height: 2px;
-        background: var(--white);
+        background: #1a5c2a;
         border-radius: 2px;
         transition: all .2s;
       }
@@ -196,14 +213,14 @@
       .nav-drawer {
         display: none;
         flex-direction: column;
-        background: var(--dark);
+        background: var(--white);
         padding: 16px 24px 24px;
-        border-top: 1px solid rgba(255,255,255,.08);
+        border-top: 1px solid rgba(26,92,42,.12);
       }
       .nav-drawer a {
-        color: rgba(255,255,255,.8);
+        color: #1a5c2a;
         padding: 12px 0;
-        border-bottom: 1px solid rgba(255,255,255,.06);
+        border-bottom: 1px solid rgba(26,92,42,.08);
         font-size: .95rem;
       }
       .nav-drawer a:last-child { border-bottom: none; }
