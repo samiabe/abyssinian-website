@@ -6,6 +6,7 @@
     <title>Abyssinian Transportation — Non-Emergency Medical Transport | Northern Virginia</title>
     <meta name="description" content="Abyssinian Transportation provides reliable, compassionate Non-Emergency Medical Transport (NEMT) throughout Northern Virginia. Wheelchair accessible. Medicaid accepted. Available 24/7." />
     <link rel="icon" type="image/png" href="assets/images/icon.png" />
+    <link rel="apple-touch-icon" href="assets/images/icon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -444,6 +445,48 @@
       .trust-text span {
         font-size: .78rem;
         color: rgba(255,255,255,.65);
+      }
+
+      /* ─── FLEET ──────────────────────────────────── */
+
+      .fleet-figure {
+        margin: 0;
+        position: relative;
+        line-height: 0;
+      }
+
+      @keyframes fleetPan {
+        0%   { transform: scale(1.05) translateX(0px); }
+        50%  { transform: scale(1.05) translateX(-15px); }
+        100% { transform: scale(1.05) translateX(0px); }
+      }
+
+      .fleet-pan-wrap {
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .fleet-img {
+        width: 100%;
+        max-height: 480px;
+        object-fit: cover;
+        display: block;
+        animation: fleetPan 8s ease-in-out infinite;
+      }
+
+      .fleet-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(13,31,15,.82) 0%, transparent 100%);
+        color: var(--white);
+        font-family: var(--font-display);
+        font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+        font-weight: 700;
+        letter-spacing: .04em;
+        text-align: center;
+        padding: 48px 24px 28px;
       }
 
       /* ─── SERVICES ────────────────────────────────── */
@@ -1152,6 +1195,7 @@
             <li><a href="#map">Coverage</a></li>
             <li><a href="#testimonials">Reviews</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="careers.html">Careers</a></li>
             <li><a href="tel:+15716048137" class="nav-cta">📞 Call Now</a></li>
           </ul>
 
@@ -1167,6 +1211,7 @@
         <a href="#map">Coverage Area</a>
         <a href="#testimonials">Reviews</a>
         <a href="#contact">Contact Us</a>
+        <a href="careers.html">Careers</a>
         <a href="tel:+15716048137" class="btn btn-primary">📞 Call 571-604-8137</a>
       </div>
     </nav>
@@ -1282,6 +1327,16 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ── FLEET ────────────────────────────────────── -->
+    <section id="fleet" aria-label="Our fleet">
+      <figure class="fleet-figure">
+        <div class="fleet-pan-wrap">
+          <img src="assets/images/fleet.png" alt="Abyssinian Transportation fleet — wheelchair-accessible vehicles" class="fleet-img" />
+        </div>
+        <figcaption class="fleet-caption">Our Modern, Fully-Equipped Fleet</figcaption>
+      </figure>
     </section>
 
     <!-- ── SERVICES ──────────────────────────────────── -->
@@ -1478,7 +1533,7 @@
 
           <div class="map-embed">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d196695.19551985!2d-77.19873655!3d38.83513075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1714000000000!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99440.09704986957!2d-77.30701668674232!3d38.84706994044543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64df56d3ead97%3A0x46d5b9d8d5d1f5e5!2sFairfax%20County%2C%20VA!5e0!3m2!1sen!2sus!4v1714000000000!5m2!1sen!2sus"
               allowfullscreen
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -1705,7 +1760,7 @@
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2024 Abyssinian Transportation LLC. All rights reserved. Northern Virginia, USA.</p>
+          <p>&copy; 2026 Abyssinian Transportation LLC. All rights reserved. Northern Virginia, USA.</p>
           <div class="footer-bottom-links">
             <a href="#nav">Back to Top ↑</a>
           </div>
@@ -1775,6 +1830,7 @@
           ? '0 4px 20px rgba(0,0,0,.35)'
           : 'none';
       }, { passive: true });
+
     </script>
   </body>
 </html>
